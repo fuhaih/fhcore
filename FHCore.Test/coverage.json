@@ -179,37 +179,37 @@
           "Lines": {
             "19": 0,
             "20": 0,
-            "22": 0,
-            "23": 0
+            "21": 0,
+            "22": 0
           },
           "Branches": []
         },
         "Microsoft.AspNetCore.Mvc.IActionResult FHCore.MVC.Controllers.HomeController::Contact()": {
           "Lines": {
+            "25": 0,
             "26": 0,
-            "27": 0,
-            "29": 0,
-            "30": 0
+            "28": 0,
+            "29": 0
           },
           "Branches": []
         },
         "Microsoft.AspNetCore.Mvc.IActionResult FHCore.MVC.Controllers.HomeController::Privacy()": {
           "Lines": {
+            "32": 0,
             "33": 0,
-            "34": 0,
-            "35": 0
+            "34": 0
           },
           "Branches": []
         },
         "Microsoft.AspNetCore.Mvc.IActionResult FHCore.MVC.Controllers.HomeController::Error()": {
           "Lines": {
+            "38": 0,
             "39": 0,
-            "40": 0,
-            "41": 0
+            "40": 0
           },
           "Branches": [
             {
-              "Line": 40,
+              "Line": 39,
               "Offset": 14,
               "EndOffset": 16,
               "Path": 0,
@@ -217,7 +217,7 @@
               "Hits": 0
             },
             {
-              "Line": 40,
+              "Line": 39,
               "Offset": 14,
               "EndOffset": 20,
               "Path": 1,
@@ -225,7 +225,7 @@
               "Hits": 0
             },
             {
-              "Line": 40,
+              "Line": 39,
               "Offset": 26,
               "EndOffset": 28,
               "Path": 0,
@@ -233,7 +233,7 @@
               "Hits": 0
             },
             {
-              "Line": 40,
+              "Line": 39,
               "Offset": 26,
               "EndOffset": 40,
               "Path": 1,

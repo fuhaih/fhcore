@@ -10,15 +10,17 @@ namespace FHCore.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        public ILog _log{get;set;}
+
         public IActionResult Index()
         {
+            _log.Write("进入Index页面");
             return View();
         }
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
@@ -38,6 +40,20 @@ namespace FHCore.MVC.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+
+    public interface ILog
+    {
+        void Write(string log);
+    }
+    public class MyLog : ILog
+    {
+        public void Write(string log)
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
+            Console.Write(log);
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
         }
     }
 }

@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Autofac.Extensions.DependencyInjection;
+using Autofac;
+using FHCore.MVC.Controllers;
 
 namespace FHCore.MVC
 {
@@ -20,9 +23,9 @@ namespace FHCore.MVC
         }
 
         public IConfiguration Configuration { get; }
-
+        public static IContainer ApplicationContainer { get; private set; }
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -30,9 +33,17 @@ namespace FHCore.MVC
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().AddControllersAsServices().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+            builder.RegisterType<HomeController>().PropertiesAutowired();
+            builder.RegisterType<MyLog>().As<ILog>();
+            ApplicationContainer = builder.Build();
+            
+            //builder.RegisterType<HomeController>().PropertiesAutowired();
+            
+            // Create the IServiceProvider based on the container.
+            return new AutofacServiceProvider(ApplicationContainer);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
