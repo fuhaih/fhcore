@@ -5,16 +5,29 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FHCore.MVC.Models;
-
+using Autofac;
 namespace FHCore.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        public ILog _log{get;set;}
-
         public IActionResult Index()
         {
-            _log.Write("进入Index页面");
+            using(var scope=Startup.ApplicationContainer.BeginLifetimeScope())
+            {
+                for(int i=0;i<10;i++)
+                {
+                    ITest test=scope.Resolve<ITest>();
+                    test.Write();
+                }
+            }
+            using(var scope2=Startup.ApplicationContainer.BeginLifetimeScope())
+            {
+                for(int i=0;i<10;i++)
+                {
+                    ITest test=scope2.Resolve<ITest>();
+                    test.Write();
+                }
+            }
             return View();
         }
 
@@ -43,17 +56,24 @@ namespace FHCore.MVC.Controllers
         }
     }
 
-    public interface ILog
-    {
-        void Write(string log);
+    public interface ITest{
+        void Write();
     }
-    public class MyLog : ILog
+
+    public class MyTest:ITest
     {
-        public void Write(string log)
+        public string GUID;
+        public MyTest()
         {
-            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
-            Console.Write(log);
-            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
+            GUID= Guid.NewGuid().ToString();
+
+        }
+        public void Write()
+        {
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine(GUID);
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------------");
         }
     }
+
 }

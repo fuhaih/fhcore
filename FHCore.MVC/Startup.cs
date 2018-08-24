@@ -37,7 +37,7 @@ namespace FHCore.MVC
             var builder = new ContainerBuilder();
             builder.Populate(services);
             builder.RegisterType<HomeController>().PropertiesAutowired();
-            builder.RegisterType<MyLog>().As<ILog>();
+            builder.RegisterType<MyTest>().As<ITest>().InstancePerLifetimeScope();
             ApplicationContainer = builder.Build();
             
             //builder.RegisterType<HomeController>().PropertiesAutowired();
