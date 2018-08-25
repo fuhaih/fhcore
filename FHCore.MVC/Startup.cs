@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Autofac.Extensions.DependencyInjection;
 using Autofac;
 using FHCore.MVC.Controllers;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace FHCore.MVC
 {
@@ -60,6 +62,12 @@ namespace FHCore.MVC
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                Path.Combine(Directory.GetCurrentDirectory(), @"layui")),
+                RequestPath = new PathString("/layui")
+            });
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
