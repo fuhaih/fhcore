@@ -12,22 +12,6 @@ namespace FHCore.MVC.Controllers
     {
         public IActionResult Index()
         {
-            using(var scope=Startup.ApplicationContainer.BeginLifetimeScope())
-            {
-                for(int i=0;i<10;i++)
-                {
-                    ITest test=scope.Resolve<ITest>();
-                    test.Write();
-                }
-            }
-            using(var scope2=Startup.ApplicationContainer.BeginLifetimeScope())
-            {
-                for(int i=0;i<10;i++)
-                {
-                    ITest test=scope2.Resolve<ITest>();
-                    test.Write();
-                }
-            }
             return View();
         }
 
