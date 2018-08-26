@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/FHCore.MVC/bin/Debug/netcoreapp2.1/FHCore.MVC.dll",
+            "program": "${workspaceFolder}/Host/FHCore.MVC/bin/Debug/netcoreapp2.1/FHCore.MVC.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/FHCore.MVC",
+            "cwd": "${workspaceFolder}/Host/FHCore.MVC",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
@@ -32,7 +32,7 @@
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "sourceFileMap": {
-                "/Views": "${workspaceFolder}/FHCore.MVC/Views"
+                "/Views": "${workspaceFolder}/Host/FHCore.MVC/Views"
             }
         },
         {

@@ -1,6 +1,6 @@
 {
-  "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.Test\\bin\\Debug\\netcoreapp2.1\\FHCore.MVC.dll": {
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Program.cs": {
+  "E:\\git\\fhcore\\Tests\\FHCore.Test\\bin\\Debug\\netcoreapp2.1\\FHCore.MVC.dll": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Program.cs": {
       "FHCore.MVC.Program": {
         "System.Void FHCore.MVC.Program::Main(System.String[])": {
           "Lines": {
@@ -19,29 +19,41 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Startup.cs": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Startup.cs": {
       "FHCore.MVC.Startup": {
         "Microsoft.Extensions.Configuration.IConfiguration FHCore.MVC.Startup::get_Configuration()": {
           "Lines": {
-            "22": 0
+            "27": 0
           },
           "Branches": []
         },
-        "System.Void FHCore.MVC.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+        "Autofac.IContainer FHCore.MVC.Startup::get_ApplicationContainer()": {
           "Lines": {
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.IServiceProvider FHCore.MVC.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
             "31": 0,
             "32": 0,
+            "33": 0,
+            "34": 0,
             "35": 0,
-            "36": 0
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "48": 0,
+            "49": 0
           },
           "Branches": [
             {
-              "Line": 27,
+              "Line": 32,
               "Offset": 8,
               "EndOffset": 10,
               "Path": 0,
@@ -49,7 +61,7 @@
               "Hits": 0
             },
             {
-              "Line": 27,
+              "Line": 32,
               "Offset": 8,
               "EndOffset": 33,
               "Path": 1,
@@ -60,29 +72,35 @@
         },
         "System.Void FHCore.MVC.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)": {
           "Lines": {
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
+            "53": 0,
             "54": 0,
             "55": 0,
             "56": 0,
             "57": 0,
-            "58": 0,
             "59": 0,
-            "60": 0
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0
           },
           "Branches": [
             {
-              "Line": 41,
+              "Line": 54,
               "Offset": 9,
               "EndOffset": 11,
               "Path": 0,
@@ -90,7 +108,7 @@
               "Hits": 0
             },
             {
-              "Line": 41,
+              "Line": 54,
               "Offset": 9,
               "EndOffset": 22,
               "Path": 1,
@@ -98,17 +116,17 @@
               "Hits": 0
             },
             {
-              "Line": 54,
-              "Offset": 71,
-              "EndOffset": 73,
+              "Line": 73,
+              "Offset": 127,
+              "EndOffset": 129,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 54,
-              "Offset": 71,
-              "EndOffset": 96,
+              "Line": 73,
+              "Offset": 127,
+              "EndOffset": 152,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
@@ -117,20 +135,20 @@
         },
         "System.Void FHCore.MVC.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0
           },
           "Branches": []
         }
       },
       "FHCore.MVC.Startup/<>c": {
-        "System.Void FHCore.MVC.Startup/<>c::<ConfigureServices>b__4_0(Microsoft.AspNetCore.Builder.CookiePolicyOptions)": {
+        "System.Void FHCore.MVC.Startup/<>c::<ConfigureServices>b__8_0(Microsoft.AspNetCore.Builder.CookiePolicyOptions)": {
           "Lines": {},
           "Branches": [
             {
-              "Line": 30,
+              "Line": 35,
               "Offset": 8,
               "EndOffset": 10,
               "Path": 0,
@@ -138,7 +156,7 @@
               "Hits": 0
             },
             {
-              "Line": 30,
+              "Line": 35,
               "Offset": 8,
               "EndOffset": 33,
               "Path": 1,
@@ -149,7 +167,7 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Models\\ErrorViewModel.cs": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Models\\ErrorViewModel.cs": {
       "FHCore.MVC.Models.ErrorViewModel": {
         "System.String FHCore.MVC.Models.ErrorViewModel::get_RequestId()": {
           "Lines": {
@@ -165,7 +183,7 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Controllers\\HomeController.cs": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Controllers\\HomeController.cs": {
       "FHCore.MVC.Controllers.HomeController": {
         "Microsoft.AspNetCore.Mvc.IActionResult FHCore.MVC.Controllers.HomeController::Index()": {
           "Lines": {
@@ -242,11 +260,32 @@
             }
           ]
         }
+      },
+      "FHCore.MVC.Controllers.MyTest": {
+        "System.Void FHCore.MVC.Controllers.MyTest::Write()": {
+          "Lines": {
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.Void FHCore.MVC.Controllers.MyTest::.ctor()": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0
+          },
+          "Branches": []
+        }
       }
     }
   },
-  "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.Test\\bin\\Debug\\netcoreapp2.1\\FHCore.MVC.Views.dll": {
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Views\\Home\\About.cshtml": {
+  "E:\\git\\fhcore\\Tests\\FHCore.Test\\bin\\Debug\\netcoreapp2.1\\FHCore.MVC.Views.dll": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\Home\\About.cshtml": {
       "AspNetCore.Views_Home_About/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views_Home_About/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
@@ -258,7 +297,7 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Views\\Home\\Contact.cshtml": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\Home\\Contact.cshtml": {
       "AspNetCore.Views_Home_Contact/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views_Home_Contact/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
@@ -270,210 +309,17 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Views\\Home\\Index.cshtml": {
-      "AspNetCore.Views_Home_Index/<ExecuteAsync>d__14": {
-        "System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__14::MoveNext()": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\Home\\Index.cshtml": {
+      "AspNetCore.Views_Home_Index/<ExecuteAsync>d__0": {
+        "System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
             "2": 0
           },
-          "Branches": [
-            {
-              "Line": 2,
-              "Offset": 200,
-              "EndOffset": 202,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 200,
-              "EndOffset": 225,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 391,
-              "EndOffset": 393,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 391,
-              "EndOffset": 460,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 494,
-              "EndOffset": 496,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 527,
-              "EndOffset": 529,
-              "Path": 0,
-              "Ordinal": 6,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 527,
-              "EndOffset": 598,
-              "Path": 1,
-              "Ordinal": 7,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 494,
-              "EndOffset": 607,
-              "Path": 1,
-              "Ordinal": 5,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 780,
-              "EndOffset": 782,
-              "Path": 0,
-              "Ordinal": 8,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 780,
-              "EndOffset": 805,
-              "Path": 1,
-              "Ordinal": 9,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 972,
-              "EndOffset": 974,
-              "Path": 0,
-              "Ordinal": 10,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 972,
-              "EndOffset": 1043,
-              "Path": 1,
-              "Ordinal": 11,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1079,
-              "EndOffset": 1081,
-              "Path": 0,
-              "Ordinal": 12,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1112,
-              "EndOffset": 1114,
-              "Path": 0,
-              "Ordinal": 14,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1112,
-              "EndOffset": 1183,
-              "Path": 1,
-              "Ordinal": 15,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1079,
-              "EndOffset": 1192,
-              "Path": 1,
-              "Ordinal": 13,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1365,
-              "EndOffset": 1367,
-              "Path": 0,
-              "Ordinal": 16,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1365,
-              "EndOffset": 1390,
-              "Path": 1,
-              "Ordinal": 17,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1557,
-              "EndOffset": 1559,
-              "Path": 0,
-              "Ordinal": 18,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1557,
-              "EndOffset": 1628,
-              "Path": 1,
-              "Ordinal": 19,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1664,
-              "EndOffset": 1666,
-              "Path": 0,
-              "Ordinal": 20,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1697,
-              "EndOffset": 1699,
-              "Path": 0,
-              "Ordinal": 22,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1697,
-              "EndOffset": 1768,
-              "Path": 1,
-              "Ordinal": 23,
-              "Hits": 0
-            },
-            {
-              "Line": 2,
-              "Offset": 1664,
-              "EndOffset": 1777,
-              "Path": 1,
-              "Ordinal": 21,
-              "Hits": 0
-            }
-          ]
+          "Branches": []
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Views\\Home\\Privacy.cshtml": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\Home\\Privacy.cshtml": {
       "AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
@@ -484,7 +330,7 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Views\\Shared\\Error.cshtml": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\Shared\\Error.cshtml": {
       "AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
@@ -498,7 +344,7 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Views\\Shared\\_CookieConsentPartial.cshtml": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\Shared\\_CookieConsentPartial.cshtml": {
       "AspNetCore.Views_Shared__CookieConsentPartial/<ExecuteAsync>d__10": {
         "System.Void AspNetCore.Views_Shared__CookieConsentPartial/<ExecuteAsync>d__10::MoveNext()": {
           "Lines": {
@@ -627,9 +473,9 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Views\\Shared\\_Layout.cshtml": {
-      "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_3>d": {
-        "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_3>d::MoveNext()": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\Shared\\_Layout - 副本.cshtml": {
+      "AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_3>d": {
+        "System.Void AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_3>d::MoveNext()": {
           "Lines": {
             "16": 0
           },
@@ -805,8 +651,8 @@
           ]
         }
       },
-      "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_0>d": {
-        "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_0>d::MoveNext()": {
+      "AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_0>d": {
+        "System.Void AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_0>d::MoveNext()": {
           "Lines": {
             "6": 0
           },
@@ -950,8 +796,8 @@
           ]
         }
       },
-      "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_13>d": {
-        "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_13>d::MoveNext()": {
+      "AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_13>d": {
+        "System.Void AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_13>d::MoveNext()": {
           "Lines": {
             "54": 0
           },
@@ -1207,8 +1053,8 @@
           ]
         }
       },
-      "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_14>d": {
-        "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_14>d::MoveNext()": {
+      "AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_14>d": {
+        "System.Void AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_14>d::MoveNext()": {
           "Lines": {
             "69": 0
           },
@@ -1432,8 +1278,8 @@
           ]
         }
       },
-      "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_1>d": {
-        "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_1>d::MoveNext()": {
+      "AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_1>d": {
+        "System.Void AspNetCore.Views_Shared__Layout___副本/<<ExecuteAsync>b__45_1>d::MoveNext()": {
           "Lines": {
             "44": 0,
             "72": 0
@@ -1915,7 +1761,18 @@
         }
       }
     },
-    "G:\\Fuhai\\GitWorkSpace\\fhcore\\FHCore.MVC\\Views\\_ViewStart.cshtml": {
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\Shared\\_Layout.cshtml": {
+      "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__9_1>d": {
+        "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__9_1>d::MoveNext()": {
+          "Lines": {
+            "71": 0,
+            "87": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "E:\\git\\fhcore\\Host\\FHCore.MVC\\Views\\_ViewStart.cshtml": {
       "AspNetCore.Views__ViewStart/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views__ViewStart/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {

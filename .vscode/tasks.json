@@ -15,7 +15,7 @@
         },
         {
             "label": "test",
-            "command": "dotnet test ${workspaceFolder}/FHCore.Test/FHCore.Test.csproj /p:CollectCoverage=true",
+            "command": "dotnet test ${workspaceFolder}/Tests/FHCore.Test/FHCore.Test.csproj /p:CollectCoverage=true",
             "type": "shell",
             "group": "build",
             "presentation": {

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHCore.MVC", "FHCore.MVC\FHCore.MVC.csproj", "{8C6FFBA2-B75B-4F8B-95F8-891B9538D012}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHCore.MVC", "Host\FHCore.MVC\FHCore.MVC.csproj", "{8C6FFBA2-B75B-4F8B-95F8-891B9538D012}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHCore.Test", "FHCore.Test\FHCore.Test.csproj", "{E73C60FD-9396-463C-BF47-B890598A6D68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHCore.Test", "Tests\FHCore.Test\FHCore.Test.csproj", "{E73C60FD-9396-463C-BF47-B890598A6D68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
