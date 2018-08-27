@@ -17,6 +17,16 @@
             "label": "test",
             "command": "dotnet test ${workspaceFolder}/Tests/FHCore.Test/FHCore.Test.csproj /p:CollectCoverage=true",
             "type": "shell",
+            "group": "test",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet publish -c Release -o ./publish ${workspaceFolder}/Host/FHCore.MVC/FHCore.MVC.csproj",
+            "type": "shell",
             "group": "build",
             "presentation": {
                 "reveal": "silent"
