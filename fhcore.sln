@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHCore.Common", "Common\FHC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{46C8822F-3F00-45FE-8111-8C2D1C968F57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHCore.Console", "Application\FHCore.Console\FHCore.Console.csproj", "{420D4A20-65CE-4795-85DD-9CE6B9B9CBC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHCore.Consoles", "Application\FHCore.Consoles\FHCore.Consoles.csproj", "{420D4A20-65CE-4795-85DD-9CE6B9B9CBC2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A82CB396-25AB-44F7-862E-6730EA6BB038}"
 EndProject
