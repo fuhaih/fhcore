@@ -68,6 +68,12 @@ namespace FHCore.MVC
                 Path.Combine(Directory.GetCurrentDirectory(), @"layui")),
                 RequestPath = new PathString("/layui")
             });
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                Path.Combine(Directory.GetCurrentDirectory(), @"images")),
+                RequestPath = new PathString("/images")
+            });
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>

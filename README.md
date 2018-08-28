@@ -285,3 +285,23 @@ docker run --name fhcore -p 6606:6606 --restart always -d myapp/fhcore:1.0
 ```
 
 端口号随意，映射的端口号（也就是docker内端口号）需要和WebHost定义的端口号一致。
+
+# 自定义静态文件
+## 在Startup中配置静态文件
+dotnet core中静态文件默认是在wwwroot目录下，其他目录下的文件是无法通过http访问的，如果有其他的静态文件夹需要通过http访问，可以自定义静态文件
+
+```csharp
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(
+    Path.Combine(Directory.GetCurrentDirectory(), @"images")),
+    RequestPath = new PathString("/images")
+});
+```
+上面配置的静态文件夹是在项目目录下的images文件夹，通过[http://host/images/*]可以访问images目录下文件
+## docker中添加数据卷
+```vim
+docker run --name fhcore -p 6606:6606 -v /home/dockerpublish/fhcore/images:/app/images --restart always -d myapp/fhcore:1.0
+```
+把主机/home/dockerpublish/fhcore/images目录映射到容器/app/images路径中，容器的工作路径是在/app，所以/app/images就是容器中项目的images路径了。
+项目在访问images目录的时候，直接访问的是主机/home/dockerpublish/fhcore/images目录

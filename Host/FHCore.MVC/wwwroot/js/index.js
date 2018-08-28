@@ -65,7 +65,7 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
     //上传
     upload.render({
       elem: '#uploadDemo'
-      ,url: '' //上传接口
+      ,url: 'api/Upload' //上传接口
       ,done: function(res){
         console.log(res)
       }
