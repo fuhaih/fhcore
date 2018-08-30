@@ -305,3 +305,37 @@ docker run --name fhcore -p 6606:6606 -v /home/dockerpublish/fhcore/images:/app/
 ```
 把主机/home/dockerpublish/fhcore/images目录映射到容器/app/images路径中，容器的工作路径是在/app，所以/app/images就是容器中项目的images路径了。
 项目在访问images目录的时候，直接访问的是主机/home/dockerpublish/fhcore/images目录
+
+# Docker部署
+
+Docker支持直接用Dockerfile进行项目的部署,支持版本是1.7以上
+
+修改Dockerfile内容如下
+```dockerfile
+FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+WORKDIR /app
+EXPOSE 6606/tcp
+
+FROM microsoft/dotnet:2.1-sdk AS build
+WORKDIR /src
+COPY Host/FHCore.MVC/FHCore.MVC.csproj Host/FHCore.MVC/
+RUN dotnet restore Host/FHCore.MVC/FHCore.MVC.csproj
+COPY . .
+RUN dotnet build Host/FHCore.MVC/FHCore.MVC.csproj -c Release -o /app
+
+FROM build AS publish
+COPY Host/FHCore.MVC/layui /app/layui
+RUN dotnet publish Host/FHCore.MVC/FHCore.MVC.csproj -c Release -o /app
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT dotnet FHCore.MVC.dll
+```
+Dockerfile文件路径是在解决方案同目录下
+这样方便自动化部署
+
+# Docker可视化
+```
+docker run -d --privileged -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
+```
