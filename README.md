@@ -1,4 +1,7 @@
 # vs code 开发 .net core 程序
+
+**注意:** 由于vs code对razor的自能提示不是很友好，所以直接换回vs studio进行开发
+
 ## vs code 插件
 * c# ：提供语法高亮
 * c# Extensions ：方便创建和管理文件
