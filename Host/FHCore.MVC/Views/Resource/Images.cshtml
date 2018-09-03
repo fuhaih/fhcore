@@ -1,4 +1,23 @@
 @{
     ViewData["Title"] = "Images Page";
 }
-<p>Images</p>
+@section Scripts{
+  <script src="/js/images.js"></script> 
+}
+@section Styles {
+    <style>
+    /* body{margin: 10px;} */
+    .flow-default li{
+      width:16%;
+      float:left;
+      padding:2%;
+    }
+    .flow-default li img{
+      width:100%;
+    }
+    </style>
+}
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+  <legend>信息流 - 滚动加载</legend>
+</fieldset>
+<ul class="flow-default" id="LAY_demo1"></ul>
