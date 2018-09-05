@@ -342,3 +342,43 @@ Dockerfile文件路径是在解决方案同目录下
 ```
 docker run -d --privileged -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
 ```
+
+# 用bower包管理工具管理静态文件
+> 安装node
+windows下直接下载安装包安装
+
+>安装bower
+
+```node
+$ node install -g bower
+```
+
+>初始化bower
+
+```
+$ bower init 
+```
+会在当前项目根目录下多出一个bower.json的文件
+
+> 添加bower配置文件
+
+在当前项目的根目录中创建一个.bowerrc文件，在window下创建的话需要把文件名命名为".bowerrc."
+
+配置信息如下
+
+```json
+{
+    "directory" : "Host/FHCore.MVC/wwwroot/lib",
+    "json"      : "",
+    "endpoint"  : "",
+    "searchpath"  : "",
+    "shorthand_resolver" : ""
+}
+```
+directory是包管理时的安装路径
+
+>安装requirejs
+
+```
+$ bower install requirejs --save
+```
