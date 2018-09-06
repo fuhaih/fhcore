@@ -1,0 +1,11 @@
+{
+  "name": "fhcore",
+  "version": "1.0.0",
+  "description": "**注意:** 由于vs code对razor的自能提示不是很友好，所以直接换回vs studio进行开发",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
