@@ -21,6 +21,15 @@ namespace FHCore.MVC
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            .ConfigureAppConfiguration((hostingcontext,config)=>{
+                var dict = new Dictionary<string, string>
+                {
+                    {"test", "DEV_1111111-1111"},
+                    {"test1", "PROD_2222222-2222"}
+                };
+                config.AddInMemoryCollection(dict);
+                config.AddCommandLine(args);
+            })
+            .UseStartup<Startup>();
     }
 }

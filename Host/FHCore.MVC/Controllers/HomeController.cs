@@ -6,12 +6,23 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FHCore.MVC.Models;
 using Autofac;
+using Microsoft.Extensions.Configuration;
+
 namespace FHCore.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        public IConfiguration configuration;
+        public HomeController(IConfiguration configuration)
+        {
+            this.configuration=configuration;
+        }
+
         public IActionResult Index()
         {
+            string message= configuration.GetValue<string>("test");
+            //ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = message;
             return View();
         }
 

@@ -335,6 +335,8 @@ WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT dotnet FHCore.MVC.dll
 ```
+**个人理解：** publish和final的虚拟空间是隔离开的，而base和final在同一个虚拟空间内，build和publish也在同一个虚拟空间内。所以最后的`COPY --from=publish /app .` 是指把publish的文件系统的/app目录下的文件复制到当前文件系统的工作路径下（`WORKDIR /app` 当前工作路径是/app目录）。
+
 Dockerfile文件路径是在解决方案同目录下
 这样方便自动化部署
 
@@ -345,12 +347,13 @@ docker run -d --privileged -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.
 
 # 用bower包管理工具管理静态文件
 > 安装node
+
 windows下直接下载安装包安装
 
 >安装bower
 
 ```node
-$ node install -g bower
+$ npm install -g bower
 ```
 
 >初始化bower
@@ -381,4 +384,53 @@ directory是包管理时的安装路径
 
 ```
 $ bower install requirejs --save
+```
+
+# 配置
+
+内存字典对象、json文件、init文件、xml文件
+
+配置
+```csharp
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        CreateWebHostBuilder(args).Build().Run();
+    }
+
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        WebHost.CreateDefaultBuilder(args)
+            .ConfigureAppConfiguration((hostingContext, config) =>
+            {
+                var dict = new Dictionary<string, string>
+                {
+                    {"test", "DEV_1111111-1111"},
+                    {"test1", "PROD_2222222-2222"}
+                };
+                config.AddInMemoryCollection(dict);
+                config.SetBasePath(Directory.GetCurrentDirectory());
+                config.AddIniFile("config.ini", optional: true, reloadOnChange: true);
+                config.AddJsonFile("config.json", optional: true, reloadOnChange: true);
+                config.AddXmlFile("config.xml", optional: true, reloadOnChange: true);
+            })
+            .UseStartup<Startup>();
+}
+```
+
+使用
+```csharp
+public IConfiguration configuration;
+public HomeController(IConfiguration configuration)
+{
+    this.configuration=configuration;
+}
+
+public IActionResult Index()
+{
+    string message= configuration.GetValue<string>("test");
+    //ViewData["Message"] = "Your application description page.";
+    ViewData["Message"] = message;
+    return View();
+}
 ```

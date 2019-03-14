@@ -19,5 +19,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "angular": "angularjs#^1.7.4",
+    "requirejs": "^2.3.6"
+  }
 }
