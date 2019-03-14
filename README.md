@@ -388,7 +388,7 @@ $ bower install requirejs --save
 
 # 配置
 
-内存字典对象、json文件、init文件、xml文件
+>内存字典对象、json文件、init文件、xml文件
 
 配置
 ```csharp
@@ -434,3 +434,5 @@ public IActionResult Index()
     return View();
 }
 ```
+
+>IOptions、IOptionsSnapshot
