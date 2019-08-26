@@ -23,12 +23,12 @@ namespace FHCore.MVC
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
         public static IContainer ApplicationContainer { get; private set; }
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -41,7 +41,6 @@ namespace FHCore.MVC
             builder.RegisterType<HomeController>().PropertiesAutowired();
             builder.RegisterType<MyTest>().As<ITest>().InstancePerLifetimeScope();
             ApplicationContainer = builder.Build();
-            
             //builder.RegisterType<HomeController>().PropertiesAutowired();
             
             // Create the IServiceProvider based on the container.
@@ -75,7 +74,6 @@ namespace FHCore.MVC
                 RequestPath = new PathString("/images")
             });
             app.UseCookiePolicy();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
